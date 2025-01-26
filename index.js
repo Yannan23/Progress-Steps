@@ -45,7 +45,38 @@ function update() {
         } else {
             line.style.setProperty('--bg-color', '#E5E7EB');
         }
+
+        updateButtonStates();
     });
+
+
+    // if (currentActive === 1) {
+    //     prevButton.classList.add('disabled');
+    //     // nextButton.classList.add('active');
+    // } else if (currentActive === lineCount) {
+    //     nextButton.classList.add('disabled')
+    // } else {
+    //     prevButton.classList.add('active');
+    //     nextButton.classList.add('active');
+    // }
+
+    function updateButtonStates() {
+        // Reset all button states first
+        prevButton.classList.remove('disabled', 'active');
+        nextButton.classList.remove('disabled', 'active');
+
+        if (currentActive === 1) {
+            prevButton.classList.add('disabled');
+            nextButton.classList.add('active');
+        } else if (currentActive === lineCount - 1) {
+            prevButton.classList.add('active');
+            nextButton.classList.add('disabled');
+        } else {
+            prevButton.classList.add('active');
+            nextButton.classList.add('active');
+        }
+    }
+
 
     // if (currentActive === 1) {
     //     prevButton.disabled = true;
@@ -58,6 +89,3 @@ function update() {
 }
 
 update();
-
-
-// style.setProperty('--counter-border-color', 'red');

@@ -1,6 +1,5 @@
 .line-container {
     counter-reset: number;
-    transition: all 0.3s ease-in-out;
 }
 
 .line {
@@ -30,17 +29,11 @@
     border: 4px solid var(--counter-border-color, #4379e4);
 }
 
+.active {
+    background-color: #4379e4;
+}
 
-// .line:last-child::after {
-//     @include before-after;
-//     right: -43px;
-//     border: 4px solid var(--counter-border-color, #E5E7EB);
-// }
-
-// .bg-active {
-//     background-color: var(--counter-border-color, #4379e4);
-// }
-
-// .border-active {
-//     border: 4px solid var(--counter-border-color, #4379e4);
-// }
+.disabled {
+    background-color: #E5E7EB;
+    cursor: not-allowed;
+}

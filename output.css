@@ -1455,9 +1455,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
@@ -2210,7 +2207,6 @@
 }
 .line-container {
   counter-reset: number;
-  transition: all 0.3s ease-in-out;
 }
 .line {
   background-color: var(--bg-color, #E5E7EB);
@@ -2234,6 +2230,13 @@
 }
 .line:first-child::before {
   border: 4px solid var(--counter-border-color, #4379e4);
+}
+.active {
+  background-color: #4379e4;
+}
+.disabled {
+  background-color: #E5E7EB;
+  cursor: not-allowed;
 }
 @keyframes spin {
   to {
